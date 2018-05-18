@@ -18,3 +18,13 @@ body {
  background: url('../img/patterns.png') repeat top left #FFCD00;
   border-left: 5px solid #fff;
 }
+
+.button__store {
+  background-color: #DA291C;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.button__store:hover {
+  background-color: #da291ccf;
+}
