@@ -64,4 +64,19 @@ body {
 .hashtag {
   font-family: 'futura';
   font-weight: 700;
+  color: #DA291C;
+}
+
+.headline {
+  font-family: futura;
+  font-weight: 300;
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+.headline b {
+  margin-left: 10px;
+  font-size: 6rem;
+  font-weight: 500;
+  color: #DA291C;
 }
