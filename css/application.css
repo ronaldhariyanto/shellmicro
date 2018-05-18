@@ -72,6 +72,7 @@ body {
   font-weight: 300;
   font-size: 5rem;
   text-transform: uppercase;
+  color: #002F6C;
 }
 
 .headline b {
@@ -79,4 +80,55 @@ body {
   font-size: 6rem;
   font-weight: 500;
   color: #DA291C;
+}
+
+.price__normal {
+  font-family: futura;
+  margin-top: 0;
+}
+
+.price__normal span {
+  text-decoration: line-through;
+  font-weight: 500;
+  color: #002F6C;
+}
+
+.price__promo {
+  font-family: futura;
+  margin-top: 0;
+}
+
+.price__promo span {
+  font-weight: 500;
+  font-size: 2rem;
+  background-color: #C4D600;
+  color: #fff;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.subheadline {
+  font-family: futura;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: #fff;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.subheadline b {
+  font-weight: 500;
+}
+
+button {
+  font-family: 'futura', sans-serif;
+}
+
+.blue {
+  color: #002F6C;
+}
+
+.orange {
+  color: #ED8B00;
 }
