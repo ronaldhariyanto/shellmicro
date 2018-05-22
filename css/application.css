@@ -1,7 +1,7 @@
 
 body {
   font-family: 'futura', sans-serif;
-  background: linear-gradient(90deg, #FFCD00 50%, #DA291C 50%);
+  background: #FFD200;
 }
 
 /* .main-container {
@@ -15,8 +15,29 @@ body {
 }
 
 .content-right {
- background: url('../img/patterns.png') repeat top left #FFCD00;
-  border-left: 5px solid #fff;
+  
+}
+
+.content--ramadhan {
+  /* background: url('../img/bg-ramadhan-top.png') no-repeat top center green, url('../img/bg-ramadhan-bottom.png') no-repeat center bottom; */
+  background-image: url('../img/bg-ramadhan-top.png'), url('../img/bg-ramadhan-mid.png'), url('../img/bg-ramadhan-bottom.png');
+  background-position: center top, center, center bottom;
+  background-repeat: no-repeat, repeat-y, no-repeat;
+  background-color: #007F49;
+  background-size: contain;
+}
+
+.logo a {
+  display: inline-block;
+  padding: 20px;
+}
+
+.logo img {
+  height: 55px;
+}
+
+.content--everyday {
+  background: url('../img/patterns.png') repeat top left #FFCD00;
 }
 
 .uk-slidenav {
@@ -131,4 +152,20 @@ button {
 
 .orange {
   color: #ED8B00;
+}
+
+.footer {
+
+}
+
+.uk-modal-dialog {
+  background: url('../img/patterns.png') repeat left top #FFD200;
+  border: 1px solid #DA291C;
+  color: #222;
+  font-family: 'futura', sans-serif;
+}
+
+.uk-modal-close-default {
+  background-color: #000;
+  color: #fff;
 }
