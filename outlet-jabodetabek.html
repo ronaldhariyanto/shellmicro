@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="css/application.css?H" />
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/vanilla-dataTables.min.css">
+    <script src="js/vanilla-dataTables.min.js"></script>
   </head>
   <body class="bg-normal">
     <section class="bg-silver">
@@ -41,20 +43,12 @@
               </div>
             </header>
             <main class="uk-text-center uk-height-viewport">
-              <div id="app">
-                {{ stores }}
-                <!-- <ul uk-tab>
-                  <li v-for="store in stores">
-                    {{ store.city }}
-                  </li>
-                </ul> -->
-
-                <ul class="uk-switcher uk-margin">
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                  <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                  <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
-                </ul>
-                {{ message }}
+              <ul class="uk-breadcrumb">
+                <li><a href="index.html">Shop n Drive</a></li>
+                <li><span>Outlet Jabodetabek</span></li>
+              </ul>
+              <div class="uk-card uk-card-body uk-card-default">
+                <table id="storeTable" class="uk-table uk-table-striped"></table>
               </div>
             </main>
           </div>
@@ -75,23 +69,19 @@
         </div>
       </footer>
     </section>
-    <script src="js/vue.js"></script>
+    
     <script src="js/application.js"></script>
     <script>
-      var app = new Vue({
-        el: '#app',
-        data: {
-          message: 'Hello coy!',
-          stores: null
-        },
-        created: function () {
-          fetch("./data.json")
-            .then(r => r.json())
-            .then(data => {
-              this.stores=data;
-            });
-        }
-      })
+      var table = new DataTable("#storeTable", {
+      ajax: {
+        url: "./data.json",
+      }
+    });
+
+    table.on("datatable.ajax.loaded", function() {
+      // IE9
+      this.wrapper.className = this.wrapper.className.replace(" dataTable-loading", "");
+    });
     </script>
   </body>
 </html>
