@@ -41,7 +41,21 @@
               </div>
             </header>
             <main class="uk-text-center uk-height-viewport">
-              <h2 class="uk-modal-title">Outlet</h2>
+              <div id="app">
+                {{ stores }}
+                <!-- <ul uk-tab>
+                  <li v-for="store in stores">
+                    {{ store.city }}
+                  </li>
+                </ul> -->
+
+                <ul class="uk-switcher uk-margin">
+                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                  <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                  <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+                </ul>
+                {{ message }}
+              </div>
             </main>
           </div>
         </div>
@@ -61,6 +75,23 @@
         </div>
       </footer>
     </section>
+    <script src="js/vue.js"></script>
     <script src="js/application.js"></script>
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          message: 'Hello coy!',
+          stores: null
+        },
+        created: function () {
+          fetch("./data.json")
+            .then(r => r.json())
+            .then(data => {
+              this.stores=data;
+            });
+        }
+      })
+    </script>
   </body>
 </html>
