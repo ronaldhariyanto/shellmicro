@@ -1,7 +1,26 @@
-
 body {
   font-family: 'futura', sans-serif;
+}
+
+.uk-container {
+  max-width: 980px;
+}
+
+@media (max-width: 639px) {
+  .uk-container {
+    padding: 0;
+  }
+}
+
+.bg-yellow {
   background: #FFD200;
+}
+
+.bg-silver {
+  background: rgb(255,255,255);
+  background: -webkit-linear-gradient(rgba(255,255,255,1) 0%, rgba(214,213,212,1) 54%, rgba(203,202,200,1) 100%);
+  background: -o-linear-gradient(rgba(255,255,255,1) 0%, rgba(214,213,212,1) 54%, rgba(203,202,200,1) 100%);
+  background: linear-gradient(rgba(255,255,255,1) 0%, rgba(214,213,212,1) 54%, rgba(203,202,200,1) 100%);
 }
 
 .content-left {
@@ -10,7 +29,7 @@ body {
 }
 
 .content-right--everyday {
-  background: url('../img/splash.png') no-repeat left bottom;
+  background: url('../img/bg-oil-splash.png') no-repeat left bottom;
 }
 
 .content--ramadhan {
@@ -19,6 +38,14 @@ body {
   background-repeat: no-repeat, repeat-y, no-repeat;
   background-color: #007F49;
   background-size: contain;
+}
+
+.content--everyday {
+  background-image: url('../img/bg-circle.png'), url('../img/bg-shadow.png');
+  background-position: right top, left center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, cover;
+  background-attachment: fixed, fixed;
 }
 
 .logo a {
@@ -30,9 +57,7 @@ body {
   height: 55px;
 }
 
-.content--everyday {
-  background: url('../img/patterns.png') repeat top left #f1f1f196;
-}
+
 
 .content--everyday main {
 
@@ -80,53 +105,21 @@ body {
   margin-right: 0;
 }
 
-.hashtag {
-  font-family: 'futura';
-  font-weight: 700;
-  color: #DA291C;
-}
-
 .headline {
   font-family: futura;
   font-weight: 300;
-  font-size: 5rem;
+  font-size: 4rem;
   text-transform: uppercase;
   color: #002F6C;
 }
 
 .headline b {
-  margin-left: 10px;
   font-size: 6rem;
-  font-weight: 500;
+  font-weight: 700;
   color: #DA291C;
 }
 
-.price__normal {
-  font-family: futura;
-  margin-top: 0;
-}
-
-.price__normal span {
-  text-decoration: line-through;
-  font-weight: 500;
-  color: #002F6C;
-}
-
-.price__promo {
-  font-family: futura;
-  margin-top: 0;
-}
-
-.price__promo span {
-  font-weight: 500;
-  font-size: 2rem;
-  background-color: #C4D600;
-  color: #fff;
-  padding: 10px 20px;
-  display: inline-block;
-}
-
-.subheadline {
+.sub-headline {
   font-family: futura;
   font-weight: 300;
   text-transform: uppercase;
@@ -136,12 +129,87 @@ body {
   display: inline-block;
 }
 
-.subheadline b {
+.sub-headline b {
   font-weight: 500;
+}
+
+.rules-container {
+  background: url('../img/product-headline.png') no-repeat bottom right;
+  background-size: contain;
+  padding: 20px;
+}
+
+.rules {
+  text-align: left;
+}
+
+.rules-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.rules__title {
+  font-size: 20px;
+  font-weight: 300;
+  display: inline-block;
+  background-color: #fff;
+  margin-left: -18px;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.rules-list li {
+  margin-bottom: 15px;
+}
+
+.rules__headline {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-size: 20px;
+  color: #FFD200;
+  background: red;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+.rules__image {
+  display: inline-block;
+  position: relative;
+  z-index: 22;
+  top: -4px;
+}
+
+.poins-benefit {
+  background-color: #ffd20085;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.poins-benefit h3 {
+  font-size: 28px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.poins-benefit b {
+  display: block;
+  color: #000;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1;
+  margin-top: 15px;
 }
 
 button {
   font-family: 'futura', sans-serif;
+}
+
+.footer {
+  background: url('../img/bottom-bg.png') no-repeat left bottom;
+  padding: 180px 20px 20px;
+  background-size: cover;
+  height: 100px;
 }
 
 .blue {
