@@ -61,6 +61,23 @@ body {
   padding: 20px;
 }
 
+@media (max-width: 639px) {
+  .logo {
+    padding: 10px;
+    margin-bottom: 50px;
+  }
+
+  .logo--left img {
+    height: 30px;
+    width: auto;
+  }
+
+  .logo--right img {
+    height: 46px;
+    width: auto;
+  }
+}
+
 .uk-slidenav {
   color: #eee;
 }
@@ -247,12 +264,12 @@ body {
   line-height: 1.2;
   border-radius: 9px;
   padding: 20px;
-  color: #000;
+  color: #fff;
 }
 
 .button__store:hover,
 .button__register:hover {
-  color: #fff;
+  color: #000;
 }
 
 .button__store {
@@ -300,4 +317,49 @@ body {
 
 .orange {
   color: #ED8B00;
+}
+
+.content--ramadhan .poins-benefit {
+  padding-bottom: 100px;
+}
+
+.content--ramadhan .poins-benefit h3 {
+  background-color: transparent;
+}
+
+.content--ramadhan .poins-benefit-box {
+  background: transparent;
+  border: none;
+  min-height: auto;
+  padding: 0;
+}
+
+.content--ramadhan .poins-benefit b {
+  color: #ffeca9;
+  font-weight: 400;
+}
+
+.content--ramadhan .sub-headline {
+  background-color: #ffeca9;
+}
+
+.content--ramadhan .headline {
+  font-weight: 500;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.content--ramadhan .headline img {
+  background-color: #ffd200;
+}
+
+@media (max-width: 639px) {
+  .content--ramadhan .headline img {
+    width: 155px;
+    margin-right: 5px;
+  }
+}
+
+.content--ramadhan .headline b {
+  color: #ffd200;
 }
