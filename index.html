@@ -21,15 +21,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/uikit.min.css" />
     <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/application.css?H" />
+    <link rel="stylesheet" href="css/application.css?L" />
     <script src="js/uikit.min.js"></script>
     <script src="js/uikit-icons.min.js"></script>
   </head>
-  <body>
-    <section class="bg-silver">
+  <body class="bg-silver">
+    <section class="content--everyday">
       <div class="uk-container">
-        <div class="main-container content--everyday">
-          <div class="uk-card content">
+        <div class="main-container">
+          <div class="uk-card">
             <header>
               <div class="uk-flex uk-flex-between uk-flex-middle">
                 <div class="logo logo--left">
@@ -40,129 +40,168 @@
                 </div>
               </div>
             </header>
-            <main class="uk-text-center">
-              <h1 class="headline">Dapatkan promo <br><b>buy 2 get 2</b><br><img src="img/logo-shell.png" alt="Shell Helix Astra 10W- 30 SN">10W- 30 SN</h1>
+            <main class="">
+              <div class="uk-text-center">
+                <img src="img/logo-shell.png" alt="Shell Helix Astra 10W- 30 SN" width="200">
+              </div>
               <div class="rules-bg">
-                <img src="img/slide-01.png" alt="Shell Helix">
-                <h4 class="price__before">Harga Normal: <b>Rp. 510.000</b></h4>
-                <h3 class="price__after">Harga Promo: <b>Rp. 255.000</b></h3>
+                <img src="img/product-headline-mobile.png" alt="Shell Helix">
+              </div>
+              <h1 class="headline uk-text-center">Register sekarang dan dapatkan e-voucher <b>Buy 2 get 2</b>
+               Shell Helix Astra 10W- 30 SN</h1>
+              <div class="register-container">
+                <div class="register-content uk-width-1-3@m">
+                  <form class="uk-form-stacked">
+                    <div>
+                      <label class="uk-form-label">Name</label>
+                      <div class="uk-form-controls">
+                        <input class="uk-input" type="text" placeholder="Name" name="personName">
+                      </div>
+                    </div>
+                    <div>
+                      <label class="uk-form-label">Phone Number</label>
+                      <div class="uk-form-controls">
+                        <input class="uk-input" type="text" placeholder="Phone Number" name="personPhone">
+                      </div>
+                    </div>
+                    <div>
+                      <label class="uk-form-label">Email</label>
+                      <div class="uk-form-controls">
+                        <input class="uk-input" type="text" placeholder="Email" name="personEmail">
+                      </div>
+                    </div>
+                    <div>
+                      <label class="uk-form-label">Gender</label>
+                      <div class="uk-form-controls">
+                        <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
+                          <label><input class="uk-radio" type="radio" name="personGender"  value="Female"> Female</label>
+                          <label><input class="uk-radio" type="radio" name="personGender" value="Male" checked> Male</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="uk-text-center">
+                      <button class="uk-button button__register uk-button-large" type="submit">Register</button>
+                    </div>
+                  </form>
+                </div>
               </div>
               <div class="rules-container">
                 <div class="rules">
                   <h4 class="rules__headline">Mekanisme Voucher Beli 2 gratis 2</h4>
-                  <ul class="rules-list">
-                    <li>
-                      <span class="rules__image"><img src="img/ico-mekanisme-2.png" alt=""></span>
-                      <span class="rules__title">Masuk ke Web: <b>www.shopanddrive.com/shellhelixastra</b></span>
+                  <div uk-grid class="uk-grid uk-grid-small uk-child-width-expand@s uk-text-center" uk-height-match="target: > div > .rules-box">
+                    <div>
+                      <div class="rules-box">
+                        <span class="rules__image"><img src="img/ico-mekanisme-2.png" alt=""></span>
+                        <span class="rules__title">Masukan data diri Anda di kolom register</span>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="rules-box">
+                        <span class="rules__image"><img src="img/ico-mekanisme-3.png" alt=""></span>
+                        <span class="rules__title">E-voucher yang Anda dapat akan kami kirimkan ke email Anda</span>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="rules-box">
+                        <span class="rules__image"><img src="img/ico-mekanisme-4.png" alt=""></span>
+                        <span class="rules__title">Redeem e-voucher ke store Shop and Drive terdekat</span>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="rules-box">
+                        <span class="rules__image"><img src="img/ico-mekanisme-5.png" alt=""></span>
+                        <span class="rules__title">Periode penukaran voucher 18 Mei – 30 Juni 2018</span>
+                      </div>
                     </li>
-                    <li>
-                      <span class="rules__image"><img src="img/ico-mekanisme-3.png" alt=""></span>
-                      <span class="rules__title">Register dan e-voucher akan dikirim ke email</span>
-                    </li>
-                    <li>
-                      <span class="rules__image"><img src="img/ico-mekanisme-4.png" alt=""></span>
-                      <span class="rules__title">Redeem voucher ke Shop and Drive terdekat</span>
-                    </li>
-                    <li>
-                      <span class="rules__image"><img src="img/ico-mekanisme-5.png" alt=""></span>
-                      <span class="rules__title">Periode 18 Mei - 30 Juni 2018</span>
-                    </li>
-                  </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="uk-margin-large-top">
-                <a href="outlet-jabodetabek.html" class="uk-button button__store">
-                  <span uk-icon="icon: location; ratio: 2"></span>
-                  Store Locator
-                </a>
-                <a href="registrasi-promo.html" class="uk-button button__register">
-                  <span uk-icon="icon: cart; ratio: 2"></span>
-                  Get Your Unique Code
+              <h2 class="sub-headline uk-display-block uk-text-center">Kunjungi <b>Shop and Drive</b> terdekat<br>untuk dapatkan Shell Helix Astra.</h2>
+              <div class="uk-margin-medium-top uk-text-center">
+                <a href="outlet-jabodetabek.html" class="uk-button button__store uk-button-large">
+                  <span uk-icon="icon: location; ratio: 1.2"></span>
+                  Store Location
                 </a>
               </div>
-              <h2 class="sub-headline uk-display-block">Kunjungi <b>Shop and Drive</b> terdekat<br>untuk dapatkan Shell Helix Astra.</h2>
-              <div class="uk-margin-medium-bottom uk-margin-medium-top">
+              <div class="uk-margin-medium-bottom uk-margin-medium-top uk-text-center">
                 <img src="img/hashtag.png" alt="Shellebration">
               </div>
-              <h3 class="sub-headline-bottom">Oli Shell Helix Astra melindungi keausan dan tahan temperatur tinggi.</h3>
-              <div class="poins-benefit uk-width-4-5@m">
+              <h3 class="sub-headline-bottom uk-text-center">Oli Shell Helix Astra Melindungi terhadap keausan mesin dan tahan temperatur tinggi.</h3>
+              <div class="poins-benefit uk-width-1-1@m uk-text-center">
                 <h3 class="poins-benefit__title">Gratis 11 Poin Pengecekan Disetiap Kunjungan</h3>
-                <div class="uk-grid-medium uk-child-width-1-4@s uk-text-center" uk-grid>
-                  <div>
-                    <div class="poins-benefit-box">
-                      <img src="img/ico-poin-ban.png" alt="Poin Pengecekan"><b>Semir Ban</b>
-                    </div>
+                <div uk-slider="autoplay: true">
+                  <div class="uk-position-relative uk-visible-toggle uk-light">
+                    <ul class="uk-slider-items uk-child-width-1-2@s uk-child-width-1-4@m uk-grid">
+                      <li class="poins-benefit-box uk-width-1-5@m uk-width-1-2">
+                        <h4>Poin 1</h4>
+                        <img src="img/ico-poin-ban.png" alt="Poin Pengecekan"><b>Semir Ban</b>
+                      </li>
+                      <li class="poins-benefit-box uk-width-1-5@m uk-width-1-2">
+                        <h4>Poin 2</h4>
+                        <img src="img/ico-poin-udara.png" alt="Poin Pengecekan"><b>Filter Udara Dibersihkan</b>
+                      </li>
+                      <li class="poins-benefit-box uk-width-1-5@m uk-width-1-2">
+                        <h4>Poin 3</h4>
+                        <img src="img/ico-poin-aki.png" alt="Poin Pengecekan"><b>Kelistrikan &amp; Air Aki</b>
+                      </li>
+                      <li class="poins-benefit-box uk-width-1-5@m uk-width-1-2">
+                        <h4>Poin 4</h4>
+                        <img src="img/ico-poin-filter.png" alt="Poin Pengecekan"><b>Filter Oli, Udara, AC</b>
+                      </li>
+                      <li class="poins-benefit-box uk-width-1-5@m uk-width-1-2">
+                        <h4>Poin 5</h4>
+                        <img src="img/ico-poin-ban.png" alt="Poin Pengecekan"><b>Tekanan Angin Ditambah</b>
+                      </li>
+                      <li class="poins-benefit-box uk-width-1-5@m uk-width-1-2">
+                        <h4>Poin 6</h4>
+                        <img src="img/ico-poin-oli.png" alt="Poin Pengecekan"><b>Oli Mesin &amp; Transmisi, Oli Gardan</b>
+                      </li>
+                      <li class="poins-benefit-box uk-width-1-5@m uk-width-1-2">
+                        <h4>Poin 7</h4>
+                        <img src="img/ico-poin-radiator.png" alt="Poin Pengecekan"><b>Air Radiator</b>
+                      </li>
+                      <li class="poins-benefit-box uk-width-1-5@m uk-width-1-2">
+                        <h4>Poin 8</h4>
+                        <img src="img/ico-poin-wiper.png" alt="Poin Pengecekan"><b>Kondisi Wiper Blade</b>
+                      </li>
+                      <li class="poins-benefit-box uk-width-1-5@m uk-width-1-2">
+                        <h4>Poin 9</h4>
+                        <img src="img/ico-poin-rem.png" alt="Poin Pengecekan"><b>Minyak Rem dan Minyak Kopling</b>
+                      </li>
+                      <li class="poins-benefit-box uk-width-1-5@m uk-width-1-2">
+                        <h4>Poin 10</h4>
+                        <img src="img/ico-poin-shock.png" alt="Poin Pengecekan"><b>Shock Absorber</b>
+                      </li>
+                      <li class="poins-benefit-box uk-width-1-5@m uk-width-1-2">
+                        <h4>Poin 11</h4>
+                        <img src="img/ico-poin-lampu.png" alt="Poin Pengecekan"><b>Sistem Penerangan dan Lampu-Lampu</b>
+                      </li>
+                    </ul>
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
                   </div>
-                  <div>
-                    <div class="poins-benefit-box">
-                      <img src="img/ico-poin-udara.png" alt="Poin Pengecekan"><b>Filter Udara Dibersihkan</b>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="poins-benefit-box">
-                      <img src="img/ico-poin-aki.png" alt="Poin Pengecekan"><b>Kelistrikan &amp; Air Aki</b>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="poins-benefit-box">
-                      <img src="img/ico-poin-filter.png" alt="Poin Pengecekan"><b>Filter Oli, Udara, AC</b>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="poins-benefit-box">
-                      <img src="img/ico-poin-ban.png" alt="Poin Pengecekan"><b>Tekanan Angin Ditambah</b>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="poins-benefit-box">
-                      <img src="img/ico-poin-oli.png" alt="Poin Pengecekan"><b>Oli Mesin &amp; Transmisi, Oli Gardan</b>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="poins-benefit-box">
-                      <img src="img/ico-poin-radiator.png" alt="Poin Pengecekan"><b>Air Radiator</b>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="poins-benefit-box">
-                      <img src="img/ico-poin-wiper.png" alt="Poin Pengecekan"><b>Kondisi Wiper Blade</b>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="poins-benefit-box">
-                      <img src="img/ico-poin-rem.png" alt="Poin Pengecekan"><b>Minyak Rem dan Minyak Kopling</b>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="poins-benefit-box">
-                      <img src="img/ico-poin-shock.png" alt="Poin Pengecekan"><b>Shock Absorber</b>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="poins-benefit-box">
-                      <img src="img/ico-poin-lampu.png" alt="Poin Pengecekan"><b>Sistem Penerangan dan Lampu-Lampu</b>
-                    </div>
-                  </div>
+                  
+                  <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
                 </div>
               </div>
             </main>
+            <footer class="footer">
+              <div class="footer-container">
+                <div class="uk-flex uk-flex-between uk-flex-middle">
+                  <div>
+                    <img src="img/ico-call.png" alt="Shop N Drive" width="200">
+                  </div>
+                  <div>
+                    <img src="img/slide-01.png" alt="Shell Helix" width="100">
+                  </div>
+                </div>
+              </div>
+            </footer>
           </div>
         </div>
       </div>
-      <footer class="footer">
-        <div class="uk-container">
-          <div class="footer-container">
-            <div class="uk-flex uk-flex-between uk-flex-middle">
-              <div>
-                <img src="img/ico-call.png" alt="Shop N Drive" width="200">
-              </div>
-              <div>
-                <img src="img/slide-01.png" alt="Shell Helix" width="100">
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      
     </section>
     <script src="js/application.js"></script>
   </body>
