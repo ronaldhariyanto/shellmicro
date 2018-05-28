@@ -73,11 +73,840 @@
     </section>
     <script src="js/application.js"></script>
     <script>
-      var table = new DataTable("#storeTable", {
-      ajax: {
-        url: "./data.json",
-      }
-    });
+      var myData = {
+        "headings": [
+          "Nama",
+          "Alamat",
+          "Lokasi",
+          "Kota"
+        ],
+        "data": [
+          [
+            "Shop&Drive - Artha Gading",
+            "Jl. Kelapa Nias Raya Blok. QE-1 Kav. No. 12, Kelapa Gading",
+            "Deretan Sport Mall",
+            "Jakarta Utara"
+          ],
+          [
+            "Shop&Drive - Hibrida",
+            "Jl. Kelapa Hibrida Raya Blok PD XIV No. 16-17",
+            "Pintu 3 Jl. Raya Pegangsaan Dua",
+            "Jakarta Utara"
+          ],
+          [
+            "Shop&Drive - Muara Karang",
+            "JL. Pluit Karang Utara Blok. A2 No. 171 A-B",
+            "Setelah belokan Pasar Ikan Muara Angke, ada di sebelah kanan",
+            "Jakarta Utara"
+          ],
+          [
+            "Shop&Drive - Pantai Indah Kapuk ",
+            "Jl. Pantai Indah Selatan I Ruko Elang Laut Boulevard Blok A No. 9, Kamal Muara",
+            "Dekat RS. Grand Family",
+            "Jakarta Utara"
+          ],
+          [
+            "Shop&Drive - Sunter 1",
+            "Jl. Danau Sunter Blok A1 Kavling 1",
+            "Depan Mall Sunter",
+            "Jakarta Utara"
+          ],
+          [
+            "Shop&Drive - Sunter 2",
+            "Jl. Raya Sunter Agung Podomoro Blok. E9 No. 22",
+            "Deretan RS. Ibu dan Anak Hermina",
+            "Jakarta Utara"
+          ],
+          [
+            "Shop&Drive - Sunter 3",
+            "Jl. Taman Sunter Indah Blok. HJ-2/15, Sunter Jaya",
+            "Sepanjang Ruko Taman Sunter Indah / BCA",
+            "Jakarta Utara"
+          ],
+          [
+            "Super Shop&Drive Kelapa Gading  ",
+            "Jl. Raya Boulevard Timur Blok ZA No.7 Kelapa Gading",
+            "Deretan Sekolah Al Azhar",
+            "Jakarta Utara"
+          ],
+          [
+            "Super Shop&Drive Kelapa Gading Baru",
+            "Jl.Boulevard Barat Blok LC-8 Kav No.1,Kelapa Gading Barat",
+            "Jakarta Utara",
+            "Jakarta Utara"
+          ],
+          [
+            "Super Shop&Drive Pluit",
+            "Jl. Pluit Utara No. 64,Jakarta Utara",
+            "Deretan cucian mobil United",
+            "Jakarta Utara"
+          ],
+          [
+            "Shop&Drive - Citra Garden",
+            "Ruko Citra Garden II Blok H-2 No. 17, Cengkareng",
+            "Setelah Pasar Segar dari arah Tangerang",
+            "Jakarta Barat"
+          ],
+          [
+            "Shop&Drive - City Resort",
+            "Komplek Mutiara Taman Palem Blok D1 No. 68 (SD lama taman palem)",
+            "Belakang Mall Carefour Taman Palem, samping RSUD Cengkareng",
+            "Jakarta Barat"
+          ],
+          [
+            "Shop&Drive - Kebayoran Lama",
+            "Jl. Kebayoran Lama Raya No. 33 B",
+            "Rumah Sakit Permata Hijau ke kanan dari arah Kebun Jeruk",
+            "Jakarta Barat"
+          ],
+          [
+            "Shop&Drive - Kebun Jeruk",
+            "Jl. Panjang No. 15, Kebon Jeruk",
+            "Sebelum Wisma Relasi dari arah Kedoya",
+            "Jakarta Barat"
+          ],
+          [
+            "Shop&Drive - Kemanggisan",
+            "Jl. Kemanggisan Ilir Raya No. 26-G, Palmerah",
+            "Seberang Pom Bensin",
+            "Jakarta Barat"
+          ],
+          [
+            "Shop&Drive - Meruya Utara Baru",
+            "Jl. Meruya Utara No. 3 B, RT. 001 RW 001, Kembangan",
+            "Dekat Polsek Kembangan",
+            "Jakarta Barat"
+          ],
+          [
+            "Shop&Drive - Muwardi",
+            "Jl. DR. Muwardi No. 25, Grogol",
+            "Belakang Terminal Grogol",
+            "Jakarta Barat"
+          ],
+          [
+            "Shop&Drive - Pos Pengumben",
+            "Jl. Pos Pengumben Raya No. 3, Kebon Jeruk",
+            "Setelah lampu merah Kelapa II dari Jalan Panjang",
+            "Jakarta Barat"
+          ],
+          [
+            "Shop&Drive - Puri Kembangan",
+            "Jl. Kembangan Raya No. 11 A",
+            "Setelah Apartement Westting dari arah Pasar Puri",
+            "Jakarta Barat"
+          ],
+          [
+            "Shop&Drive - Semanan",
+            "Komplek Perumahan Taman Semanan Indah Blok G No. 3, Duri Kosambi",
+            "Setelah KFC, belok ke kiri",
+            "Jakarta Barat"
+          ],
+          [
+            "Shop&Drive - Taman Ratu",
+            "Komplek Perumahan Taman Ratu Blok. F1 No.5 Duri Kepa",
+            "Perempatan Taman Ratu",
+            "Jakarta Barat"
+          ],
+          [
+            "Shop&Drive - Taman Surya",
+            "Jl. Boulevard Taman Surya Blok K5 No.6, Perum Taman Surya 3",
+            "Bundaran Taman Surya, depan toko Total Buah",
+            "Jakarta Barat"
+          ],
+          [
+            "Shop&Drive - Tanjung Duren",
+            "Jl. Raya Tanjung Duren No. 15",
+            "Belakang BPK Penaburan",
+            "Jakarta Barat"
+          ],
+          [
+            "Shop&Drive Puri Indah, Jakarta Barat",
+            "Jl. Kembangan Raya No. 2A, RT.003 RW.001, Kembangan Utara",
+            "",
+            "Jakarta Barat"
+          ],
+          [
+            "Shop&Drive Tubagus Angke, Jakarta Barat",
+            "Jl. Tubagus Angke No. 26/4, Wijaya Kusuma- Jakarta Barat",
+            "",
+            "Jakarta Barat"
+          ],
+          [
+            "PS Shop&Drive - Gatot Subroto",
+            "Jl. Gatot Subroto Kav. 31 E, Kuningan - Setiabudi (SPBU 34.12902)",
+            "Samping Patra Jasa, seberang menara Jamsostek",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - Cipete",
+            "Jl. RS. Fatmawati No. 89 C, Cipete Utara",
+            "Sebelah Kantor Infomedia",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - Fatmawati",
+            "Jl. Fatmawati No. 41",
+            "Depan Wisma Ubut",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - Gandaria City",
+            "Jl. Sultan Iskandar Muda No.99 E, Kebayoran Lama Utara",
+            "Depan Mall Gandaria City",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - Lenteng Agung",
+            "Jl. Lenteng Agung Raya No. 12, Pasar Minggu",
+            "Setelah putaran Isip ke arah Depok",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - M. Kahfi",
+            "Jl. Moch. Kahfi I No. 1, Ciganjur",
+            "100 meter setelah pertigaan Brigif (depan cucian mobil Mayunda Motor)",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - M. Kahfi 2",
+            "Jl. Moh. Kahfi II No. 2, Ciganjur, Jagakarsa",
+            "",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - Mampang",
+            "Jl. Mampang Prapatan Raya 92 RT.006 RW.003",
+            "Sebelum Balai Hermina dari arah Ragunan",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - Pasar Minggu",
+            "Jl. Raya Pasar Minggu Km.19 No. 52",
+            "Samping Hotel Fiducia",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - Pondok Pinang",
+            "Jl. Ciputat Raya No. 15, Pondok Pinang",
+            "100 Meter setelah lampu merah Pondok Pinang ke arah Kebayoran Lama",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - Radio Dalam",
+            "Jl. Radio Dalam Raya No. 39",
+            "Sebelah AC Denso Kiki Jaya atau Hero Golf",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - Sahardjo Tebet",
+            "Jl. Dr. Sahardjo No. 125, Tebet",
+            "Depan/seberang Rumah Sakit Ibu Anak Budi Jaya",
+            "Jakarta Selatan"
+          ],
+          [
+            "Super Shop&Drive Ampera",
+            "Jl. Ampera Raya No.138 Ragunan",
+            "Samping Pengadilan Jakarta Selatan",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - Tanah Kusir",
+            "Jl. Ciputat Raya No. 14 A, Kebayoran Lama Utara",
+            "Dari arah Pd. Pinang menuju ke Pasar Kebayoran Lama, sebelah kiri, 100 meter sebelum pertigaan Jl Bungur.",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - Tebet",
+            "Jl. Tebet Barat Dalam Raya No. 4",
+            "Belakang Mc Donalds Tebet",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - Veteran",
+            "Jl. RC. Veteran No.33. Bintaro",
+            "Depan Kampus Trisakti",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - Warung Buncit 1",
+            "Jl. Warung Buncit Raya No. 14",
+            "Setelah Pejaten Village dari arah Mampang",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - Warung Buncit 2",
+            "Jl. Buncit Raya No. 23, Duren Tiga, Pancoran",
+            "Samping Seven Eleven Buncit, depan Total Buah",
+            "Jakarta Selatan"
+          ],
+          [
+            "Shop&Drive - Wolter Monginsidi",
+            "Jl. Wolter Monginsidi No. 113, Kebayoran Baru",
+            "Dari arah Mampang, ambil ke arah Capt. Tendean. Sebelum lampu merah Santa, ada di sebelah kanan.",
+            "Jakarta Selatan"
+          ],
+          [
+            "PS Shop&Drive - Cipinang",
+            "Jl. Raya Kalimalang. Tarum Barat (SPBU 34.134.20), Kel. Cipinang Muara RT.001 RW.013 Kec. Jatinegara",
+            "Di dalam SPBU Kalimalang, Dekat Sekolah Penabur",
+            "Jakarta Timur"
+          ],
+          [
+            "Shop&Drive - Ceger",
+            "Jl. Raya Ceger No. 21",
+            "50 meter dari depan Bank BRI Ceger",
+            "Jakarta Timur"
+          ],
+          [
+            "Shop&Drive - Cibubur",
+            "Jl. Raya Alternatif Cibubur No. 9C",
+            "Sebrang Cibubur Point Automotive Centre/Deretan Restoran Hanamasa dan sebelah Laboratorium Prodia",
+            "Jakarta Timur"
+          ],
+          [
+            "Shop&Drive - Cijantung",
+            "Jl. Raya Bogor Km. 24 No. 61, Ciracas",
+            "Depan Sekolah Pb Sudirman, dekat Pool Bus Mayasari Bakti",
+            "Jakarta Timur"
+          ],
+          [
+            "Shop&Drive - Cipinang Jaya",
+            "Jl. Raya Cipinang Jaya No.45 B",
+            "Depan Perumahan Cipinang Elok, samping Bank BNI ",
+            "Jakarta Timur"
+          ],
+          [
+            "Shop&Drive - Dermaga",
+            "Jl. Duren Sawit Raya Blok B.5 Kav. No. 2 B, Klender",
+            "100 meter dari Apotik Kimia Farma Dermaga",
+            "Jakarta Timur"
+          ],
+          [
+            "Shop&Drive - Dewi Sartika",
+            "Jl. Dewi Sartika No.191, Cawang",
+            "Sebelah Kantor Pajak Cawang",
+            "Jakarta Timur"
+          ],
+          [
+            "Shop&Drive - Lubang Buaya",
+            "Jl. Pondok Gede Raya No. 27. Lubang Buaya",
+            "100 meter dari Monumen Pancasila Sakti",
+            "Jakarta Timur"
+          ],
+          [
+            "Shop&Drive - Matraman",
+            "Jl. Matraman Raya No.89, Palmeriam",
+            "Depan Berlan, Samping Gedung Usayana",
+            "Jakarta Timur"
+          ],
+          [
+            "Shop&Drive - Penggilingan",
+            "Jl. Penggilingan Raya No.49. RT.002 RW.007, Cakung",
+            "Sebelah pabrik Suzuki Motor",
+            "Jakarta Timur"
+          ],
+          [
+            "Shop&Drive - Pondok Kelapa",
+            "Jl. Raya Pondok Kelapa, Blok F1 no. 1",
+            "Dari arah Kali Malang sampai Lampu Merah Lampiri (100 Meter Dari Burgergrill) belok kanan",
+            "Jakarta Timur"
+          ],
+          [
+            "Shop&Drive - Raden Inten",
+            "Jl. Raden Inten II, Duren Sawit",
+            "Sebelah Pom Bensin Raden Inten (SPBU 34.134.10)",
+            "Jakarta Timur"
+          ],
+
+          [
+            "Shop&Drive - Bendungan Hilir ",
+            "Jl. Bendungan Hilir Raya No. 104",
+            "Samping PHD Bendungan Hilir",
+            "Jakarta Pusat"
+          ],
+          [
+            "Shop&Drive - Cempaka Putih",
+            "Jl. Cempaka Putih Raya No. 19",
+            "Samping Obong Steak",
+            "Jakarta Pusat"
+          ],
+          [
+            "Shop&Drive - Cideng",
+            "Jl. Cideng Barat Raya No. 75",
+            "Setelah Underpas Tanah Abang, sebelah kiri",
+            "Jakarta Pusat"
+          ],
+          [
+            "Shop&Drive - Garuda",
+            "Jl. Raya Garuda No. 77. Kemayoran",
+            "Setelah rell arah Jiung, ada disebelah kiri",
+            "Jakarta Pusat"
+          ],
+          [
+            "Shop&Drive - Hasyim Ashari",
+            "Jl. K.H. Hasyim Ashari No. 37-A",
+            "Deretan Hotel Losari Roxy, seberang King Photo",
+            "Jakarta Pusat"
+          ],
+          [
+            "Shop&Drive - Industri",
+            "Jl. Industri Raya No. 21 C, Kemayoran",
+            "Belakang Hotel Horizon di depan Orchard Hotel",
+            "Jakarta Pusat"
+          ],
+          [
+            "Shop&Drive - Kramat Kwitang",
+            "Jl. Kramat Raya No. 62, Kwitang",
+            "Sebelah gudang Sharp electronics (ada plang besar), sebelum flyover Senen ada di sebelah kiri",
+            "Jakarta Pusat"
+          ],
+          [
+            "Shop&Drive - Mega Glodok Kemayoran ",
+            "Kios Lantai 5 Blok. A17 No. 2, Mega Glodok Kemayoran, Kota Baru Bandar Kemayoran",
+            "MGK lantai 5 Otomotif Zone",
+            "Jakarta Pusat"
+          ],
+          [
+            "Shop&Drive - Pasar Baru (Samanhudi)",
+            "Jl. H. Samanhudi No.71 - Pasar Baru",
+            "Belakang Pasar Baru",
+            "Jakarta Pusat"
+          ],
+          [
+            "Shop&Drive - Percetakan Negara ",
+            "Jl. Percetakan Negara Raya No. 48 A, Rawasari",
+            "Depan Gedung Percetakan",
+            "Jakarta Pusat"
+          ],
+          [
+            "Shop&Drive - Bojongkulur, Bogor",
+            "Jl. Letda Natsir No.77, Bojongkulur - Gunung Putri",
+            "dekat Villa Nusa Indah 2",
+            "Bogor"
+          ],
+          [
+            "Shop&Drive - Cibinong, Bogor",
+            "Perum Bumi Cibinong Endah  A1 No. 1, Sukahati - Cibinong",
+            "di belakang Pemkot Bogor",
+            "Bogor"
+          ],
+          [
+            "Shop&Drive - Gedong Sawah, Bogor",
+            "Jl. Gedong Sawah II No. 10. Bogor Tengah",
+            "di belakang Hotel Salak",
+            "Bogor"
+          ],
+          [
+            "Shop&Drive - city Wisata",
+            "Jl. Alternatif Cibubur, Ruko Transyogi no. 1, Cibubur Country",
+            "dari perempatan Cikeas arah Jakarta kurang lebih 500 M kiri jalan atau depan Perumahan Griya Nusantara",
+            "Bogor"
+          ],
+          [
+            "Shop&Drive - city Wisata 2",
+            "Ruko Canadian Broadway Blok CBF No. 36, Limusnunggal, Cileungsi",
+            "Depan Indomart perum city wisata dari pintu keluar Jl. Narogong",
+            "Bogor"
+          ],
+          [
+            "Shop&Drive - Mayor Oking Baru, Bogor",
+            "Jl. Mayor Oking Raya, RT 003 RW 03, Ciriung, Cibinong",
+            "di Atmajaya Ciriung, seberang PT. Daehan",
+            "Bogor"
+          ],
+          [
+            "Shop&Drive - Pahlawan, Bogor",
+            "Jl. Pahlawan No. 61 B, Bondongan, Bogor Selatan",
+            "",
+            "Bogor"
+          ],
+          [
+            "Shop&Drive - Pajajaran, Bogor",
+            "Jl. Pajajaran Raya No.27, Babakan",
+            "di depan Hotel Pangrango 2, disamping Domino'S Pizza",
+            "Bogor"
+          ],
+          [
+            "Shop&Drive - Pandu, Bogor",
+            "Perumahan Indraprasta II Jl. Pandu Raya No.185",
+            "di Perempatan Indomart Tanah Baru",
+            "Bogor"
+          ],
+          [
+            "Shop&Drive - Sentul, Bogor",
+            "Jl. Alternatif Sentul RT.04 RW.10, Sukaraja, Cijujung, Bogor",
+            "di samping Indomaret Plus",
+            "Bogor"
+          ],
+          [
+            "Shop&Drive - Sholeh Iskandar, Bogor",
+            "Jl. KH. Sholeh Iskandar No. 476 H-I, Kedung Badak, Tanah Sereal",
+            "dari arah Tol menuju Parung, sebelum Mitra10 kiri jalan setelah Adira",
+            "Bogor"
+          ],
+          [
+            "Shop&Drive - Sukasari, Bogor",
+            "Jl. Sukasari I No. 2 C-D, Sukasari - Bogor Timur",
+            "arah ke Asinan Gedong Dalem, Baby Shop atau arah ke Pasar Gemrong",
+            "Bogor"
+          ],
+          [
+            "Shop&Drive Keradenan",
+            "Jl. Raya Pemda Rt.04 Rw.012 Kedung Halang, Bogor Utara Jawa Barat",
+            "Sebelah pintu masuk gerbang Villa Bogor Indah",
+            "Bogor"
+          ],
+          [
+            "Shop&Drive Sindang Barang, Bogor",
+            "Jl. Ibrahim Adji No.159 E, RT.002, RW.004, Loji, Bogor Barat",
+            "depan komplek perumahanpPertanian loji",
+            "Bogor"
+          ],
+          [
+            "Super Shop&Drive Tajur,Bogor",
+            "Jl. Raya Wangun No.242, Sindangsari, Bogor Timur",
+            "Sebelah Indomaret, depan pabrik N. Sefa, dekat Hotel Margajaya",
+            "Bogor"
+          ],
+          [
+            "Shop&Drive - Bhayangkara, Tangerang",
+            "Jl. Bhayangkara No. 88, Paku Jaya, Serpong",
+            "1 KM dari Pusdiklat Tangerang ke arah Bintaro",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Bintaro Sektor 9 Baru, Tangerang Selatan",
+            "Jl. Jend. Sudirman Blok J No. 5, Bintaro Jaya Sektor IX, Pondok Pucung",
+            "Seberang Mc Donald Bintaro Jaya Sektor IX",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Bintaro Sektor III, Tangerang Selatan",
+            "Jl. Bintaro Raya Blok DD 12 No. 1 A, Sektor III A, Bintaro Jaya",
+            "",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Ciater, Tangerang Selatan",
+            "Jl. Lingkar Timur BSD, Kampung Ciater, Rawa Mekar Jaya, Serpong",
+            "Dekat pom bensin Shell",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Cipondoh Baru, Tangerang",
+            "Jl. KH. Hasyim Ashari No. 28 A-B, Porisplawad Indah, Cipondoh",
+            "Depan perumahan Banjar Wijaya (gerbang depan)",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Ciputat, Tangerang",
+            "Jl. Ir. H. Juanda No. 60, Kampung Pisangan, Ciputat",
+            "Dekat Hotel Ciputat",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Citra Raya, Tangerang",
+            "Ruko Melia Residence Blok X.02 No. 23R, Perumahan Citra Raya, Mekarbakti",
+            "Di dalam perumahan Citra Raya",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Gading Serpong 2, Tangerang Selatan",
+            "Ruko Glaze 2 Blok B No. 19, Gading Serpong",
+            "",
+            "Tanggerang"
+          ],
+          [
+            "Super Shop&Drive Cirendeu",
+            "Jl. Raya Cirendeu No.12, RT. 03 RW. 01, Cirendeu, Ciputat, Tangerang",
+            "Samping Bank BCA Kc Cirendeu",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Gading Serpong 3, Tangerang Selatan",
+            "Ruko Paramount Mendrisio 3 Blok B No. 55, Gading Serpong",
+            "",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Gading Serpong, Tangerang",
+            "Jl. Boulevard Gading Serpong Blok AA-3 No. 43",
+            "Seberang Holland Bakery",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Jombang, Tangerang Selatan",
+            "Jl. Raya Jombang No. 27, Pondok Kacang Timur",
+            "Dekat Perumahan Villa Bintaro Regency atau bersebelahan dengan yayasan Al Mubarak",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Karawaci 2, Tangerang",
+            "Jl. Imam Bonjol No.88 B, Karawaci",
+            "Sebrang Pom Bensin Imam Bonjol Karawaci",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Karawaci, Tangerang",
+            "Komp. Ruko Borobudur Blok.C No.9-10, Jl. Kalasan Raya, Perum 2, Karawaci",
+            "Seberang Indomaret",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Mencong, Tangerang",
+            "Jl. H. Mencong (Cipto Mangunkusumo) No. 59-60 Paninggilan Ciledug - Tanggerang city",
+            "Jalan Mencong samping SMA Yapera, seberang TPU Al Maarif Paninggilan",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Pamulang, Tangerang",
+            "Jl. Siliwangi No. 88 Pondok Benda, Pamulang",
+            "Seberang PLN Pamulang",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Pinang, Tangerang",
+            "Jl. KH. Hasyim Ashari No. 141, Pinang",
+            "Dekat Perumahan Graha Raya",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Pondok Cabe, Tangerang",
+            "Jl. Raya Pondok Cabe No. 11, Desa Pondok Cabe Udik, Pamulang",
+            "Jalan raya depan Kampus Poltek Swadharma",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Pondok Kacang, Tangerang",
+            "Jl. Raden Fatah No. 35 B, Parung Serab, Ciledug",
+            "Samping Suzuki atau dekat lampu merah Mencong",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Poris, Tangerang",
+            "Jl. Maulana Hasanudin No. 8, Cipondoh",
+            "Dekat stasiun Poris",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Serpong, Tangerang",
+            "Jl. Pahlawan Seribu No. 8 H, Serpong",
+            "Samping SPBU Total / Seberang ITC Serpong",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Taman Tekno, Tangerang",
+            "Jl. Rawa Buntu Raya No.61A, Ciater - Serpong",
+            "Samping Rumah Makan Pecel Madiun",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Thamrin, Tangerang",
+            "Jl. M.H. Thamrin No. 18 A, Tangerang",
+            "Dekat SPBU Warung Mangga / Tifico",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive M. Toha Tangerang",
+            "Jl. Moh. Toha Km. 3, No.244, Periuk, Tangerang",
+            "",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive Merdeka, Tangerang",
+            "Jl. Merdeka No. 51, Sukajadi, Karawaci",
+            "",
+            "Tanggerang"
+          ],
+          [
+            "Shop&Drive - Bojongsari, Depok",
+            "Jl. Bojongsari Raya No. 43 RT. 01 RW. 04, Bojongsari",
+            "",
+            "Depok"
+          ],
+          [
+            "Shop&Drive - Cinere, Depok",
+            "Jl. Cinere Raya Blok NB - 13, Cinere, limo, Depok",
+            "Dekat dengan Polsek Cinere, samping TK AL – Biru",
+            "Depok"
+          ],
+          [
+            "Shop&Drive - Citayam, Depok",
+            "Jl. Raya Citayam No.12 B, Pancoran Mas",
+            "Seberang dealer Yamaha",
+            "Depok"
+          ],
+          [
+            "Shop&Drive - Kelapa Dua, Depok",
+            "Jalan Akses UI (Universitas Indonesia) No. 41, Cimanggis, Depok",
+            "Depan pom bensin Brimob Kelapa Dua",
+            "Depok"
+          ],
+          [
+            "Shop&Drive - Nusantara, Depok",
+            "Jl. Nusantara Raya No. 24, RT 003 RW 013, Beji",
+            "100 meter dari pertigaan Dewi Sartika sebelah kanan jalan",
+            "Depok"
+          ],
+          [
+            "Shop&Drive - Radar Auri, Depok",
+            "Jl. Radar Auri No. 13, Cimanggis",
+            "Dekat RS. Ibu dan Anak",
+            "Depok"
+          ],
+          [
+            "Shop&Drive - Sawangan, Depok",
+            "Jl. Sawangan Raya No. 21 RT.002 RW.009, Pancoran Mas",
+            "Dekat Polsek Mampang)",
+            "Depok"
+          ],
+          [
+            "Shop&Drive - Sentosa, Depok",
+            "Jl. Sentosa Raya No. 1",
+            "Dekat Sekolah Tugu Ibu",
+            "Depok"
+          ],
+          [
+            "Shop&Drive - Tapos, Depok",
+            "Jl. Raya Cimpaeun Tapos, RT.01 RW.03, Cimpaeun, Tapos - Depok",
+            "Depan jalan Kiray/One mart",
+            "Depok"
+          ],
+          [
+            "Shop&Drive Margonda Baru, Depok",
+            "Jl. Margonda Raya No. 428, Pondok Cina, Beji",
+            "",
+            "Depok"
+          ],
+          [
+            "Super Shop&Drive Jatiwaringin",
+            "Jl. Raya Jatiwaringin No.125 Pondok Gede Bekasi",
+            "Dekat Dengan Giant Jatiwaringin",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive Kranggan, Bekasi",
+            "Jl. Kranggan Raya No. 1 A, RT 002 RW 005, Jatisampurna - Bekasi",
+            "",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive Jababeka 2, Cikarang",
+            "Jl. Niaga Raya CC 5 No. 5, Pasirsari, Cikarang Selatan",
+            "",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Teuku Umar, Cibitung, Bekasi",
+            "Jl. Teuku Umar Raya Km. 43, Wanasari",
+            "100 M setelah Pasar Induk Cibitung arah ke Tambun, adanya di sebelah kanan",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Summarecon, Bekasi",
+            "Jl. Perjuangan No. 16, Marga Mulya, Summarecon",
+            "Dari Summarecon Mal Bekasi, menuju pintu keluar belakang arah stasiun, seberang kali",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Pekayon, Bekasi",
+            "Jl. A. Yani No. 2, RT 005 RW 001, Margajaya, Bekasi Selatan",
+            "200 meter dari depan Bekasi Square ke arah Rawa Panjang",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Lippo, Cikarang",
+            "Jl. Cibarusah Raya No. 32 E, Sukaresmi – Cikarang",
+            "Ddepan kantor Kepala Desa Sukaresmi, sebelum Pasar Sentral dari arah Lippo Cikarang, belakang kawasan industri EJIP",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Kartini, Bekasi",
+            "Jl. RA. Kartini No. 32, Margahayu, Bekasi Timur",
+            "Sebelah RS. Kartini, atau seberang pom bensin",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Jatiwarna, Bekasi",
+            "Jl. Hankam Raya No.1A, Jatiwarna",
+            "200 Meter dari pintu Tol Jati Warna ke arah Pondok Gede",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Jatimakmur, Bekasi",
+            "Jl. Raya Jatimakmur No. 69",
+            "Depan Dealer Suzuki Mobil Pondok Gede",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Jatibening, Bekasi",
+            "Jl. Raya Caman Ruko Bougenville B-2, Jatibening",
+            "Samping Taman Bougenville / 100 meter, samping Giant Caman",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Jatiasih Baru, Bekasi",
+            "Jl. Swatantra No. 28, Jatiasih",
+            "200 meter dari Pasar Jatiasih ke arah Pondok Gede Permai",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Jababeka, Cikarang",
+            "Ruko Sunter Niaga Mas Blok C.3 No. 7, Jl. Tarum Barat 2, Jaya Mukti, Cikarang Pusat",
+            "Dekat Pasar Bersih Cikarang Baru",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Imam Bonjol, Cikarang - Bekasi",
+            "Jl. Imam Bonjol No. 15, Cikarang Barat",
+            "Sebelum RS. Karya Medika 1, atau di seberang Fajar Paper",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Harapan Mulya, Bekasi",
+            "Jl. Jend. Sudirman Km.32, RT.001 RW.001, Harapan Mulya",
+            "50 Meter sebelum Fly Over Summarecon sebelah Daihatsu Bekasi",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Harapan Indah, Bekasi",
+            "Ruko Griya Harapan Permai Blok AB2 No. 10",
+            "Sebrang gerbang Sentra Otomotif Harapan Indah",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Harapan Indah 2, Bekasi",
+            "Ruko Commercial Park 2.1 Nomor 10, Harapan Indah 2",
+            "",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Grand Wisata, Bekasi",
+            "Jl. Legenda Raya, Kampung Kali Jambe, Desa Lambangsari RT. 004 RW. 004 - Tambun",
+            "",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Galaxi, Bekasi",
+            "Ruko Villa Galaxi, Jl. Pulo Ribung Blok AE No.99",
+            "50 M samping Kantor Kecamatan Bekasi Selatan",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Bulak Kapal, Bekasi",
+            "Jl. Ir. H. Juanda No.183",
+            "Depan pom bensin Bulak Kapal, dekat plang selamat jalan Bekasi",
+            "Bekasi"
+          ],
+          [
+            "Shop&Drive - Bintara, Bekasi",
+            "Jl. Bintara Raya No. 8 H , Ruko Bintara Bisnis Centre, Kec. Bekasi Barat",
+            "Di depan Pom Bensin Bintara",
+            "Bekasi"
+          ]
+        ]
+      };
+      var table = new DataTable("#storeTable", {data: myData});
 
     table.on("datatable.ajax.loaded", function() {
       // IE9
