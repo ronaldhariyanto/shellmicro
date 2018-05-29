@@ -1,0 +1,13 @@
+<body>
+<%
+response.write(request.form("personName"))
+%>
+<br>
+<%
+response.write(request.form("personEmail"))
+%>
+<br>
+<%
+response.write(request.form("personMobile"))
+%>
+</body>

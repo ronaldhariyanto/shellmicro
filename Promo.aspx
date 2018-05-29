@@ -1,3 +1,4 @@
+<%@ Page Language="C#" %> 
 <!DOCTYPE html>
 <html>
   <head>
@@ -51,21 +52,21 @@
                Shell Helix Astra 10W- 30 SN</h1>
               <div class="register-container">
                 <div class="register-content uk-width-1-3@m">
-                  <form class="uk-form-stacked" action="test.asp">
-                    <div>
-                      <label class="uk-form-label">Name</label>
+                  <form class="uk-form-stacked" method="post" action="registerforms.aspx">                    
+<div>
+                      <label for="personName" class="uk-form-label">Name</label>
                       <div class="uk-form-controls">
                         <input class="uk-input" type="text" placeholder="Name" name="personName">
                       </div>
                     </div>
                     <div>
-                      <label class="uk-form-label">Phone Number</label>
+                      <label for="personMobile" class="uk-form-label">Phone Number</label>
                       <div class="uk-form-controls">
-                        <input class="uk-input" type="text" placeholder="Phone Number" name="personPhone">
+                        <input class="uk-input" type="text" placeholder="Phone Number" name="personMobile">
                       </div>
                     </div>
                     <div>
-                      <label class="uk-form-label">Email</label>
+                      <label for="personEmail" class="uk-form-label">Email</label>
                       <div class="uk-form-controls">
                         <input class="uk-input" type="text" placeholder="Email" name="personEmail">
                       </div>
@@ -81,8 +82,7 @@
                     </div>
                     <div class="uk-text-center">
                       <button class="uk-button button__register uk-button-large" type="submit">Register</button>
-                    </div>
-                  </form>
+                    </div>                  </form>
                 </div>
               </div>
               <div class="rules-container">
